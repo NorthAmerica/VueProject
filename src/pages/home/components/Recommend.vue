@@ -2,7 +2,7 @@
   <div>
     <div class="title">热销推荐</div>
     <ul>
-      <li class="item border-bottom" v-for="item of recommendList" v-bind:key="item.id">
+      <li class="item border-bottom" v-for="item of list" v-bind:key="item.id">
          <img class="item-img" :src="item.imgUrl"/>
         <div class="item-info">
           <p class="item-title">{{item.text}}</p>
@@ -17,24 +17,27 @@
 <script>
 export default {
   name: 'HomeRecommend',
+  props: {
+    list: Array
+  },
   data () {
     return {
-      recommendList: [{
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1706/6b/6b4dee5d6ffbc894a3.img.png_200x200_e25b941a.png',
-        text: '宁乡炭河古城',
-        desc: '宁乡炭河古城宁乡炭河古城'
-      }, {
-        id: '0002',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1706/6b/6b4dee5d6ffbc894a3.img.png_200x200_e25b941a.png',
-        text: '宁乡炭河古城',
-        desc: '宁乡炭河古城宁乡炭河古城'
-      }, {
-        id: '0003',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1706/6b/6b4dee5d6ffbc894a3.img.png_200x200_e25b941a.png',
-        text: '宁乡炭河古城',
-        desc: '宁乡炭河古城宁乡炭河古城'
-      }]
+      // recommendList: [{
+      //   id: '0001',
+      //   imgUrl: 'http://img1.qunarzz.com/sight/p0/1706/6b/6b4dee5d6ffbc894a3.img.png_200x200_e25b941a.png',
+      //   text: '宁乡炭河古城',
+      //   desc: '宁乡炭河古城宁乡炭河古城'
+      // }, {
+      //   id: '0002',
+      //   imgUrl: 'http://img1.qunarzz.com/sight/p0/1706/6b/6b4dee5d6ffbc894a3.img.png_200x200_e25b941a.png',
+      //   text: '宁乡炭河古城',
+      //   desc: '宁乡炭河古城宁乡炭河古城'
+      // }, {
+      //   id: '0003',
+      //   imgUrl: 'http://img1.qunarzz.com/sight/p0/1706/6b/6b4dee5d6ffbc894a3.img.png_200x200_e25b941a.png',
+      //   text: '宁乡炭河古城',
+      //   desc: '宁乡炭河古城宁乡炭河古城'
+      // }]
     }
   }
 }

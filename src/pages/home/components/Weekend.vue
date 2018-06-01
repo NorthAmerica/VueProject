@@ -2,7 +2,7 @@
   <div>
     <div class="title">周末去哪儿</div>
     <ul>
-      <li class="item border-bottom" v-for="item of recommendList" v-bind:key="item.id">
+      <li class="item border-bottom" v-for="item of list" v-bind:key="item.id">
         <div class="item-img-wrapper">
           <img class="item-img" :src="item.imgUrl"/>
         </div>
@@ -18,24 +18,27 @@
 <script>
 export default {
   name: 'HomeWeekend',
+  props: {
+    list: Array
+  },
   data () {
     return {
-      recommendList: [{
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/sight/source/1505/fb/302620ed8350f8.jpg_r_640x214_25a07cb4.jpg',
-        text: '宁乡炭河古城',
-        desc: '宁乡炭河古城宁乡炭河古城'
-      }, {
-        id: '0002',
-        imgUrl: 'http://img1.qunarzz.com/sight/source/1505/fb/302620ed8350f8.jpg_r_640x214_25a07cb4.jpg',
-        text: '宁乡炭河古城',
-        desc: '宁乡炭河古城宁乡炭河古城'
-      }, {
-        id: '0003',
-        imgUrl: 'http://img1.qunarzz.com/sight/source/1505/fb/302620ed8350f8.jpg_r_640x214_25a07cb4.jpg',
-        text: '宁乡炭河古城',
-        desc: '宁乡炭河古城宁乡炭河古城'
-      }]
+      // recommendList: [{
+      //   id: '0001',
+      //   imgUrl: 'http://img1.qunarzz.com/sight/source/1505/fb/302620ed8350f8.jpg_r_640x214_25a07cb4.jpg',
+      //   text: '宁乡炭河古城',
+      //   desc: '宁乡炭河古城宁乡炭河古城'
+      // }, {
+      //   id: '0002',
+      //   imgUrl: 'http://img1.qunarzz.com/sight/source/1505/fb/302620ed8350f8.jpg_r_640x214_25a07cb4.jpg',
+      //   text: '宁乡炭河古城',
+      //   desc: '宁乡炭河古城宁乡炭河古城'
+      // }, {
+      //   id: '0003',
+      //   imgUrl: 'http://img1.qunarzz.com/sight/source/1505/fb/302620ed8350f8.jpg_r_640x214_25a07cb4.jpg',
+      //   text: '宁乡炭河古城',
+      //   desc: '宁乡炭河古城宁乡炭河古城'
+      // }]
     }
   }
 }
